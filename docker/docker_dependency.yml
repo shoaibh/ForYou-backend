@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:12.5
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=ForYou
+    volumes:
+      - '/var/docker_volumes/ForYou/postgresql_data:/var/lib/postgresql/data'
+    restart: always
+    ports:
+      - 5434:5432
